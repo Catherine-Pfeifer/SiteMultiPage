@@ -1,0 +1,168 @@
+/* ==========================================
+   CHARTE GRAPHIQUE & PALETTE ACCESSIBLE (WCAG AA)
+   ========================================== */
+:root {
+  --bg-green-pastel: #DCFCE7;
+  --bg-purple-pastel: #F3E8FF;
+  --bg-pink-pastel: #FCE7F3;
+  --bg-yellow-pastel: #FEF08A;
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+    
+  --text-on-green: #14532D;
+  --text-on-purple: #581C87;
+  --text-on-pink: #831843;
+  --text-on-yellow: #713F12;
+    
+  --text-main: #18181B;
+  --text-muted: #4B5563;
+  --accent-gold: #B45309;
+  --border-subtle: #E2E8F0;
+  --focus-ring: #2563EB;
+
+  --font-heading: 'Outfit', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --max-width: 1200px;
+  --header-height: 72px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 100%; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; border-radius: 4px; }
+
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--text-main); line-height: 1.2; }
+h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+.container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 5rem 0; }
+.section-title { text-align: center; margin-bottom: 3rem; }
+.section-title p { color: var(--text-muted); margin-top: 0.5rem; }
+
+/* Boutons & Badges */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.875rem 1.75rem; font-weight: 600; font-size: 1rem; text-decoration: none;
+  border-radius: var(--radius-sm); border: 2px solid transparent; cursor: pointer; transition: var(--transition);
+}
+.btn-primary { background-color: var(--text-on-green); color: #FFFFFF; }
+.btn-primary:hover { background-color: #0f3d21; transform: translateY(-2px); }
+.btn-outline { border-color: var(--text-on-green); color: var(--text-on-green); background-color: transparent; }
+.btn-outline:hover { background-color: var(--bg-green-pastel); transform: translateY(-2px); }
+
+.badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; }
+.badge-green { background: var(--bg-green-pastel); color: var(--text-on-green); }
+.badge-purple { background: var(--bg-purple-pastel); color: var(--text-on-purple); }
+.badge-pink { background: var(--bg-pink-pastel); color: var(--text-on-pink); }
+.badge-yellow { background: var(--bg-yellow-pastel); color: var(--text-on-yellow); }
+
+/* Navigation Header */
+.site-header {
+  position: sticky; top: 0; height: var(--header-height);
+  background-color: rgba(248, 250, 252, 0.95); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle); z-index: 1000; display: flex; align-items: center;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.brand-logo { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--text-main); text-decoration: none; }
+.brand-logo span { color: var(--accent-gold); }
+.nav-menu { display: flex; gap: 2rem; list-style: none; }
+.nav-link { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: var(--transition); padding: 0.5rem 0; position: relative; }
+.nav-link:hover, .nav-link.active { color: var(--text-main); }
+.nav-link.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: var(--text-on-green); }
+
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger { display: block; width: 24px; height: 2px; background: var(--text-main); position: relative; transition: var(--transition); }
+.hamburger::before, .hamburger::after { content: ''; position: absolute; width: 24px; height: 2px; background: var(--text-main); left: 0; transition: var(--transition); }
+.hamburger::before { top: -6px; }
+.hamburger::after { top: 6px; }
+
+/* Cartes & Grilles */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.skill-card { padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); transition: var(--transition); display: flex; flex-direction: column; gap: 1rem; }
+.skill-card.card-green { background-color: var(--bg-green-pastel); color: var(--text-on-green); }
+.skill-card.card-purple { background-color: var(--bg-purple-pastel); color: var(--text-on-purple); }
+.skill-card.card-pink { background-color: var(--bg-pink-pastel); color: var(--text-on-pink); }
+.skill-card.card-yellow { background-color: var(--bg-yellow-pastel); color: var(--text-on-yellow); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+.project-card { background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border-subtle); overflow: hidden; display: flex; flex-direction: column; transition: var(--transition); }
+.project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.project-card.is-hidden { display: none; }
+.project-thumb { height: 200px; background-color: #E2E8F0; display: flex; align-items: center; justify-content: center; font-weight: 600; color: var(--text-muted); }
+.project-content { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; gap: 1rem; }
+
+/* Timeline */
+.timeline { position: relative; max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+.timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 20px; width: 2px; background: var(--border-subtle); }
+@media (min-width: 768px) { .timeline::before { left: 50%; transform: translateX(-50%); } }
+.timeline-item { position: relative; margin-bottom: 2.5rem; width: 100%; }
+.timeline-badge { position: absolute; top: 0; left: 6px; width: 30px; height: 30px; border-radius: 50%; background: var(--bg-surface); border: 3px solid var(--text-on-green); z-index: 2; }
+@media (min-width: 768px) { .timeline-badge { left: 50%; transform: translateX(-50%); } }
+.timeline-panel { position: relative; margin-left: 60px; padding: 1.5rem; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); }
+@media (min-width: 768px) {
+  .timeline-item:nth-child(odd) .timeline-panel { margin-left: 0; width: 45%; }
+  .timeline-item:nth-child(even) .timeline-panel { margin-left: 55%; width: 45%; }
+}
+
+/* Footer */
+.site-footer { background: var(--text-main); color: #F8FAFC; padding: 3rem 0 2rem 0; margin-top: 4rem; }
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center; }
+.footer-links { display: flex; gap: 1.5rem; list-style: none; }
+.footer-links a { color: #9CA3AF; text-decoration: none; transition: var(--transition); }
+.footer-links a:hover { color: #FFFFFF; }
+
+@media (max-width: 767px) {
+  .nav-toggle { display: block; z-index: 1001; }
+  .nav-menu { position: fixed; top: 0; right: -100%; width: 80%; max-width: 300px; height: 100vh; background: var(--bg-surface); flex-direction: column; padding: 6rem 2rem 2rem 2rem; box-shadow: -4px 0 12px rgba(0,0,0,0.1); transition: right 0.3s ease-in-out; }
+  .nav-menu.is-open { right: 0; }
+}
+
+/* ==========================================
+   VARIATION DE BOUTONS OR / DORE (ACCESSIBLE)
+   ========================================== */
+
+/* 1. Bouton Or Plein (Fond doré + Texte foncé pour le contraste) */
+.btn-gold-fill {
+  background-color: var(--accent-gold); /* #B45309 ou #D97706 */
+  color: #18181B;                       /* Texte foncé indispensable pour WCAG AA */
+  border-color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.btn-gold-fill:hover {
+  background-color: #92400E;           /* Version légèrement plus sombre au survol */
+  color: #FFFFFF;                      /* Texte blanc valide car le fond devient plus sombre */
+  border-color: #92400E;
+  transform: translateY(-2px);
+}
+
+/* 2. Bouton Contour Or (Fond transparent + Bordure & Texte dorés) */
+.btn-gold-outline {
+  background-color: transparent;
+  color: var(--accent-gold);            /* Texte doré sombre #B45309 */
+  border: 2px solid var(--accent-gold);
+  font-weight: 700;
+}
+
+.btn-gold-outline:hover {
+  background-color: var(--bg-yellow-pastel); /* Fond jaune/or pastel au survol */
+  color: #713F12;                             /* Texte marron/bronze très contrasté */
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+}
