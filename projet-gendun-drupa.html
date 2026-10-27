@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refonte Web Gendun Drupa | UX/UI & Strategy - Catherine Pfeifer</title>
+  <meta name="description" content="Étude de cas : Audit CMS, wireframing sur Figma et refonte de la stratégie de communication du Centre Gendun Drupa.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .breadcrumb { display: flex; gap: 0.5rem; color: var(--text-muted); margin-bottom: 2rem; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-on-green); text-decoration: none; font-weight: 500; }
+    .breadcrumb .current { font-weight: 600; color: var(--text-main); }
+    
+    /* Style Galerie d'images Web */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .gallery-item { background: #E2E8F0; height: 220px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-weight: 600; color: var(--text-muted); overflow: hidden; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">Catherine <span>Pfeifer</span></a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <!-- FIL D'ARIANE -->
+    <nav aria-label="Fil d'Ariane" class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a>
+      <span>/</span>
+      <a href="portfolio.html?filter=web">Web &amp; Design</a>
+      <span>/</span>
+      <span class="current">Gendun Drupa</span>
+    </nav>
+
+    <h1>Centre Gendun Drupa : Refonte Web &amp; UX/UI</h1>
+    <p style="font-size: 1.2rem; color: var(--text-muted); margin: 0.5rem 0 2rem 0;">
+      Audit d'architecture de contenu, maquettage sous Figma et stratégie digitale 360°.
+    </p>
+
+    <!-- GALERIE DE MAQUETTES DE L'ETUDE DE CAS -->
+    <h2>Aperçu des Maquettes &amp; Wireframes</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">[ Maquette Figma Desktop ]</div>
+      <div class="gallery-item">[ Arborescence &amp; Wireframes ]</div>
+      <div class="gallery-item">[ Version Mobile Responsive ]</div>
+    </div>
+
+    <!-- CONTENU DÉTAILLÉ -->
+    <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <div>
+        <h2>Démarche &amp; Solution</h2>
+        <p style="margin-top: 1rem;">
+          Analyse des besoins des utilisateurs et restructuration de l'arborescence du site. Réalisation des prototypes interactifs sur Figma avant la mise en œuvre technique sous CMS.
+        </p>
+      </div>
+      <div style="background: white; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+        <h3>Informations Projet</h3>
+        <ul style="list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li><strong>Outils :</strong> Figma, Joomla 5 / WordPress</li>
+          <li><strong>Livrables :</strong> Design System, Wireframes, UI Kit</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-content"><p>&copy; 2026 Catherine Pfeifer.</p></div></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

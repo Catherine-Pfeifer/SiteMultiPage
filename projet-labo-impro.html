@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO METADATA -->
+  <title>Labo-Impro | Stratégie Social Media, Meta Ads &amp; Vidéo - Catherine Pfeifer</title>
+  <meta name="description" content="Étude de cas Labo-Impro : Élaboration du plan marketing, campagne Meta Ads, création de contenus vidéo/animations et gestion de la communauté culturelle.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    /* Styles spécifiques pour l'étude de cas */
+    .breadcrumb { 
+      display: flex; 
+      gap: 0.5rem; 
+      color: var(--text-muted); 
+      margin-bottom: 2rem; 
+      flex-wrap: wrap; 
+      font-size: 0.95rem;
+    }
+    .breadcrumb a { color: var(--text-on-green); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb .current { font-weight: 600; color: var(--text-main); }
+
+    /* Conteneur Vidéo / Animation */
+    .media-hero { 
+      position: relative; 
+      padding-bottom: 56.25%; 
+      height: 0; 
+      overflow: hidden; 
+      border-radius: var(--radius-md); 
+      background: #18181B; 
+      margin-bottom: 2.5rem; 
+      box-shadow: var(--shadow-md);
+    }
+    .media-hero iframe, .media-hero video { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      border: 0; 
+    }
+
+    /* Galerie d'images créatives */
+    .gallery-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+      gap: 1.5rem; 
+      margin: 2rem 0; 
+    }
+    .gallery-item { 
+      background: var(--bg-pink-pastel); 
+      border: 1fr solid var(--border-subtle);
+      height: 260px; 
+      border-radius: var(--radius-md); 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: 600; 
+      color: var(--text-on-pink); 
+      overflow: hidden; 
+    }
+    .gallery-item img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+
+    /* Carte Meta Ads & Liens réseaux */
+    .meta-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--accent-gold);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TETE ET NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">Catherine <span>Pfeifer</span></a>
+      <button class="nav-toggle" aria-label="Menu de navigation"><span class="hamburger"></span></button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    
+    <!-- FIL D'ARIANE SEO -->
+    <nav aria-label="Fil d'Ariane" class="breadcrumb">
+      <a href="portfolio.html">Portfolio</a>
+      <span>/</span>
+      <a href="portfolio.html?filter=social">Social Media &amp; Com</a>
+      <span>/</span>
+      <span class="current">Labo-Impro</span>
+    </nav>
+
+    <!-- TITRE & STRATÉGIE -->
+    <h1>Labo-Impro : Stratégie Digital &amp; Campagnes Meta</h1>
+    <p style="font-size: 1.2rem; color: var(--text-muted); margin: 0.5rem 0 2rem 0;">
+      Plan marketing 360°, production de contenus vidéo/animations et acquisition d'audience via Meta Ads.
+    </p>
+
+    <!-- BLOC VIDÉO / ANIMATION PRINCIPALE -->
+    <section>
+      <h2>Capsule Vidéo &amp; Animation Promotionnelle</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Vidéo teaser conçue pour capter l'attention sur les réseaux sociaux (Format Reels / TikTok &amp; Feed).</p>
+      <div class="media-hero">
+        <!-- Remplacez le lien par votre vidéo MP4 ou intégration YouTube/Vimeo -->
+        <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Vidéo promotionnelle Labo-Impro" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- GALERIE DES CRÉATIONS VISUELLES -->
+    <section style="margin-top: 3rem;">
+      <h2>Visuels &amp; Contenus Réseaux Sociaux</h2>
+      <p style="color: var(--text-muted);">Déclinaison de l'identité visuelle pour les carrousels Instagram, affiches et stories.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">[ Visuel Story Instagram ]</div>
+        <div class="gallery-item">[ Carrousel Explicatif ]</div>
+        <div class="gallery-item">[ Affiche Événement ]</div>
+      </div>
+    </section>
+
+    <!-- DÉTAILS STRATÉGIE & META ADS -->
+    <section style="margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      
+      <div>
+        <h2>Stratégie &amp; Rôle Globale</h2>
+        <p style="margin-top: 1rem;">
+          Dans le cadre de ce projet culturel, ma mission a couvert l'ensemble de la chaîne de communication : de la définition du ton éditorial jusqu'au ciblage publicitaire payant.
+        </p>
+        
+        <!-- Bloc d'information Meta Ads -->
+        <div class="meta-card">
+          <h3 style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-main);">
+            📊 Stratégie Meta Ads (Facebook &amp; Instagram)
+          </h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-muted);">
+            Configuration du Business Manager, création des campagnes d'acquisition de billetterie, A/B Testing sur les visuels animés et optimisation du coût par clic (CPC).
+          </p>
+        </div>
+      </div>
+
+      <!-- FICHE TECHNIQUE ET LIENS -->
+      <div style="background: white; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 1.5rem;">
+        <h3>Fiche Technique</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li><strong>Missions :</strong> Plan marketing, Motion, Meta Ads</li>
+          <li><strong>Outils :</strong> Meta Business Suite, After Effects, Photoshop, Canva</li>
+          <li><strong>Domaine :</strong> Culture &amp; Théâtre d'improvisation</li>
+        </ul>
+
+        <hr style="border: 0; border-top: 1px solid var(--border-subtle);">
+
+        <h3>Voir en Ligne</h3>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: flex-start;">
+            📱 Page Instagram Labo-Impro &nearr;
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: flex-start;">
+            👍 Page Facebook Labo-Impro &nearr;
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Catherine Pfeifer. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
